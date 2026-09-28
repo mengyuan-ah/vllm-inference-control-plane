@@ -118,3 +118,7 @@ The detailed evidence ledger is in the
 [Phase 2 final synthesis](artifacts/summaries/phase2-final-report.md). The single-replica foundation
 is summarized in the
 [Phase 1 final report](artifacts/summaries/phase1-final-report.md).
+
+## License
+
+Licensed under the [Apache License 2.0](LICENSE).
