@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "E10 arm manifest",
+  "type": "object",
+  "required": ["source_commit", "arm_id", "pair_id", "condition", "order_index", "model", "revision", "launch_commands", "process_generations", "timeline", "requests", "attempts", "final_accounting"],
+  "properties": {
+    "source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "arm_id": {"type": "string"},
+    "pair_id": {"type": "string"},
+    "condition": {"enum": ["control", "fault"]},
+    "order_index": {"type": "integer", "minimum": 1, "maximum": 6},
+    "model": {"const": "Qwen/Qwen3-4B-Instruct-2507"},
+    "revision": {"const": "cdbee75f17c01a7cc42f958dc650907174af0554"},
+    "launch_commands": {"type": "array", "minItems": 2},
+    "process_generations": {"type": "array"},
+    "timeline": {"type": "array"},
+    "requests": {"type": "string"},
+    "attempts": {"type": "string"},
+    "final_accounting": {"type": "object"}
+  }
+}

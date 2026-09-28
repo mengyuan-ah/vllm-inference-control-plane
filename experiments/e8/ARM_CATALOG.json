@@ -1,0 +1,14 @@
+{
+  "protocol": "e8-frozen-v1",
+  "pairs": [
+    {"replication":1,"seed":82001,"rate":8,"order":["A","B"]},
+    {"replication":1,"seed":82001,"rate":10,"order":["B","A"]},
+    {"replication":1,"seed":82001,"rate":11,"order":["A","B"]},
+    {"replication":2,"seed":82002,"rate":10,"order":["B","A"]},
+    {"replication":2,"seed":82002,"rate":11,"order":["A","B"]},
+    {"replication":2,"seed":82002,"rate":8,"order":["B","A"]},
+    {"replication":3,"seed":82003,"rate":11,"order":["B","A"]},
+    {"replication":3,"seed":82003,"rate":8,"order":["A","B"]},
+    {"replication":3,"seed":82003,"rate":10,"order":["B","A"]}
+  ]
+}

@@ -1,0 +1,1 @@
+{"stage":"smoke","rates":[11],"offers_per_arm":16,"seeds":[80001],"configurations":["A","B"],"arm_timeout_s":180,"overall_timeout_s":600}

@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "base_commit": "cbca91e283681b8d4f517495f42cf0d4c19f9d8c",
+  "suites": {
+    "e10": {"passed": 6, "failed": 0},
+    "gateway": {"passed": 64, "failed": 0},
+    "e8_regression": {"passed": 9, "failed": 0},
+    "e9_regression": {"passed": 7, "failed": 0}
+  },
+  "quality": {
+    "ruff_check": "pass",
+    "ruff_format_check": "pass",
+    "compileall": "pass",
+    "git_diff_check": "pass"
+  },
+  "cpu_preflight": {
+    "valid": true,
+    "offered": 54,
+    "completed": 54,
+    "failed": 0,
+    "rejected": 0,
+    "retried": 1,
+    "transition_sequence": ["Unhealthy", "HalfOpen", "Recovering", "Healthy"],
+    "output": "/workspace/project/verification/preflight/preflight.json"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "rates_rps": [6.0, 8.0, 10.0, 11.0, 12.0],
+  "seeds": [71001, 71002, 71003, 71004, 71005],
+  "requests_per_arm": 96,
+  "maximum_arms": 5,
+  "maximum_rate_rps": 12.0,
+  "arm_timeout_s": 180,
+  "overall_deadline_s": 900
+}

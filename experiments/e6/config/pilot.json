@@ -1,0 +1,14 @@
+{
+  "status": "frozen_before_pilot",
+  "maximum_pilot_arms": 9,
+  "maximum_offered_rate_rps": 7.0,
+  "per_arm_timeout_s": 180,
+  "overall_run_deadline_s": 2400,
+  "requests_per_arm": 64,
+  "pilot_seed": 61001,
+  "initial_rates_rps": [3.0, 4.5, 6.0],
+  "initial_request_cap_per_replica": 4,
+  "initial_queue_size": 8,
+  "initial_queue_deadline_s": 0.5,
+  "selection_rule": "Validate the proposed cap 4, queue size 8, and deadline 0.5 s at the three rates. Choose low, degradation, and overload rates from monotone latency/rejection behavior. If the proposed settings protect accepted latency and the queue improves completions without queue wait dominating the 2 s E2E target, freeze them unchanged. Otherwise stop after the bounded pilot, document why they are unsuitable, revise the protocol and pilot bounds in a new commit, and run a new declared pilot; do not adapt settings within this pilot or optimize by configuration label."
+}

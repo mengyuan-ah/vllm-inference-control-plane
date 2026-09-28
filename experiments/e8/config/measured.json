@@ -1,0 +1,1 @@
+{"stage":"measured","rates":[8,10,11],"offers_per_arm":256,"seeds":[82001,82002,82003],"configurations":["A","B"],"arm_count":18,"total_offers":4608,"arm_timeout_s":180}

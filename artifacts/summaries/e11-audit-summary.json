@@ -1,0 +1,865 @@
+{
+  "verdict": "verified_with_limits",
+  "source": "99438da2ee35c4ce466b0293a804f0ca3e7a8127",
+  "arms": [
+    {
+      "arm_id": "calibration",
+      "stage": "calibration",
+      "start": 16410.144276786,
+      "end": 16431.262106339,
+      "target": "replica1",
+      "trace_sha256": "3d07fffbc7fc679598ac157a9089380ddcc88d4895328b60d3096434d5e69df8",
+      "whole": {
+        "offered": 60,
+        "completed": 60,
+        "failures": 0,
+        "rejections": 0,
+        "slo_successes": 60,
+        "slo_misses": 0,
+        "slo_fraction": 1.0,
+        "goodput": 3.0
+      },
+      "drain_inclusive_goodput": 2.845061451496692,
+      "cohorts": {
+        "pre": {
+          "offered": 60,
+          "completed": 60,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 60,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        },
+        "slow": {
+          "offered": 0,
+          "completed": 0,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 0,
+          "slo_misses": 0,
+          "slo_fraction": null,
+          "goodput": 0.0
+        }
+      },
+      "dispatch_shares": {
+        "pre": {
+          "total": 60,
+          "target": 30
+        },
+        "slow": {
+          "total": 0,
+          "target": 0
+        }
+      },
+      "actually_delayed": 0,
+      "delayed_slo_successes": 0,
+      "cohort_vs_delay_symmetric_difference": 0,
+      "detection_delay_s": null,
+      "recovery_declaration_delay_s": null,
+      "recovery_censored": null,
+      "after_declaration": {
+        "dispatches": 0,
+        "target": 0
+      },
+      "client_latency_recovery": null,
+      "transitions": 0,
+      "oscillations": 0,
+      "false_degradations": 0,
+      "max_arrival_lag_s": 0.002066405667088933,
+      "injection_marker_error_s": 0,
+      "latency_p95": {
+        "ttft_s": 0.10139292699750513,
+        "tpot_s": 0.012510711606316944,
+        "e2e_s": 1.6884538409976813
+      }
+    },
+    {
+      "arm_id": "pilot-A",
+      "stage": "pilot",
+      "start": 16493.158453714,
+      "end": 16584.239183218,
+      "target": "replica1",
+      "trace_sha256": "a45e95c57f5cf9673337ab0db711f18cc90b52f1778543a8478629f23f1bd77e",
+      "whole": {
+        "offered": 270,
+        "completed": 270,
+        "failures": 0,
+        "rejections": 0,
+        "slo_successes": 225,
+        "slo_misses": 45,
+        "slo_fraction": 0.8333333333333334,
+        "goodput": 2.5
+      },
+      "drain_inclusive_goodput": 2.4712505656286,
+      "cohorts": {
+        "pre": {
+          "offered": 45,
+          "completed": 45,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 45,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        },
+        "slow": {
+          "offered": 90,
+          "completed": 90,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 45,
+          "slo_misses": 45,
+          "slo_fraction": 0.5,
+          "goodput": 1.5
+        },
+        "recovery": {
+          "offered": 135,
+          "completed": 135,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 135,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        }
+      },
+      "dispatch_shares": {
+        "pre": {
+          "total": 45,
+          "target": 23
+        },
+        "slow": {
+          "total": 90,
+          "target": 45
+        },
+        "recovery": {
+          "total": 135,
+          "target": 67
+        }
+      },
+      "actually_delayed": 45,
+      "delayed_slo_successes": 0,
+      "cohort_vs_delay_symmetric_difference": 45,
+      "detection_delay_s": null,
+      "recovery_declaration_delay_s": null,
+      "recovery_censored": null,
+      "after_declaration": {
+        "dispatches": 0,
+        "target": 0
+      },
+      "client_latency_recovery": {
+        "first_arrival_delay_s": 0.3335070450011699,
+        "first_completion_delay_s": 1.9230299029986782,
+        "subsequent_target_offers": 67
+      },
+      "transitions": 0,
+      "oscillations": 0,
+      "false_degradations": 0,
+      "max_arrival_lag_s": 0.0018375966671246857,
+      "injection_marker_error_s": 0.0003400979985599406,
+      "latency_p95": {
+        "ttft_s": 0.8429250439985481,
+        "tpot_s": 0.011286726031493896,
+        "e2e_s": 2.2684138279983017
+      }
+    },
+    {
+      "arm_id": "pilot-B",
+      "stage": "pilot",
+      "start": 16629.600340396,
+      "end": 16720.672964323,
+      "target": "replica1",
+      "trace_sha256": "a45e95c57f5cf9673337ab0db711f18cc90b52f1778543a8478629f23f1bd77e",
+      "whole": {
+        "offered": 270,
+        "completed": 270,
+        "failures": 0,
+        "rejections": 0,
+        "slo_successes": 253,
+        "slo_misses": 17,
+        "slo_fraction": 0.937037037037037,
+        "goodput": 2.811111111111111
+      },
+      "drain_inclusive_goodput": 2.778940946684048,
+      "cohorts": {
+        "pre": {
+          "offered": 45,
+          "completed": 45,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 45,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        },
+        "slow": {
+          "offered": 90,
+          "completed": 90,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 73,
+          "slo_misses": 17,
+          "slo_fraction": 0.8111111111111111,
+          "goodput": 2.433333333333333
+        },
+        "recovery": {
+          "offered": 135,
+          "completed": 135,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 135,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        }
+      },
+      "dispatch_shares": {
+        "pre": {
+          "total": 45,
+          "target": 23
+        },
+        "slow": {
+          "total": 90,
+          "target": 17
+        },
+        "recovery": {
+          "total": 135,
+          "target": 64
+        }
+      },
+      "actually_delayed": 17,
+      "delayed_slo_successes": 0,
+      "cohort_vs_delay_symmetric_difference": 73,
+      "detection_delay_s": 4.6074932320007065,
+      "recovery_declaration_delay_s": 5.303988428000594,
+      "recovery_censored": false,
+      "after_declaration": {
+        "dispatches": 119,
+        "target": 60
+      },
+      "client_latency_recovery": {
+        "first_arrival_delay_s": 0.001066603002982447,
+        "first_completion_delay_s": 1.304319969000062,
+        "subsequent_target_offers": 64
+      },
+      "transitions": 2,
+      "oscillations": 0,
+      "false_degradations": 0,
+      "max_arrival_lag_s": 0.0020513280032901093,
+      "injection_marker_error_s": 0.001056883000273956,
+      "latency_p95": {
+        "ttft_s": 0.8237203399985447,
+        "tpot_s": 0.01245132113385127,
+        "e2e_s": 2.053172427997197
+      }
+    },
+    {
+      "arm_id": "r1-A",
+      "stage": "measured",
+      "start": 16787.100574541,
+      "end": 16878.170663633,
+      "target": "replica1",
+      "trace_sha256": "a5a7ebe0e2855e12d1465002e7b79c82fc000d6d58b6bb975a82de9cf725f918",
+      "whole": {
+        "offered": 270,
+        "completed": 270,
+        "failures": 0,
+        "rejections": 0,
+        "slo_successes": 225,
+        "slo_misses": 45,
+        "slo_fraction": 0.8333333333333334,
+        "goodput": 2.5
+      },
+      "drain_inclusive_goodput": 2.4714479508793974,
+      "cohorts": {
+        "pre": {
+          "offered": 45,
+          "completed": 45,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 45,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        },
+        "slow": {
+          "offered": 90,
+          "completed": 90,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 45,
+          "slo_misses": 45,
+          "slo_fraction": 0.5,
+          "goodput": 1.5
+        },
+        "recovery": {
+          "offered": 135,
+          "completed": 135,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 135,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        }
+      },
+      "dispatch_shares": {
+        "pre": {
+          "total": 45,
+          "target": 23
+        },
+        "slow": {
+          "total": 90,
+          "target": 45
+        },
+        "recovery": {
+          "total": 135,
+          "target": 67
+        }
+      },
+      "actually_delayed": 45,
+      "delayed_slo_successes": 0,
+      "cohort_vs_delay_symmetric_difference": 45,
+      "detection_delay_s": null,
+      "recovery_declaration_delay_s": null,
+      "recovery_censored": null,
+      "after_declaration": {
+        "dispatches": 0,
+        "target": 0
+      },
+      "client_latency_recovery": {
+        "first_arrival_delay_s": 0.33360948499830556,
+        "first_completion_delay_s": 1.9299449099999038,
+        "subsequent_target_offers": 67
+      },
+      "transitions": 0,
+      "oscillations": 0,
+      "false_degradations": 0,
+      "max_arrival_lag_s": 0.0024850193343155524,
+      "injection_marker_error_s": 0.0010662409986252896,
+      "latency_p95": {
+        "ttft_s": 0.845582067999203,
+        "tpot_s": 0.0112956063228377,
+        "e2e_s": 2.2724060800028383
+      }
+    },
+    {
+      "arm_id": "r1-B",
+      "stage": "measured",
+      "start": 16892.144692149,
+      "end": 16983.210420927,
+      "target": "replica1",
+      "trace_sha256": "a5a7ebe0e2855e12d1465002e7b79c82fc000d6d58b6bb975a82de9cf725f918",
+      "whole": {
+        "offered": 270,
+        "completed": 270,
+        "failures": 0,
+        "rejections": 0,
+        "slo_successes": 253,
+        "slo_misses": 17,
+        "slo_fraction": 0.937037037037037,
+        "goodput": 2.811111111111111
+      },
+      "drain_inclusive_goodput": 2.7791646221478947,
+      "cohorts": {
+        "pre": {
+          "offered": 45,
+          "completed": 45,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 45,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        },
+        "slow": {
+          "offered": 90,
+          "completed": 90,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 73,
+          "slo_misses": 17,
+          "slo_fraction": 0.8111111111111111,
+          "goodput": 2.433333333333333
+        },
+        "recovery": {
+          "offered": 135,
+          "completed": 135,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 135,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        }
+      },
+      "dispatch_shares": {
+        "pre": {
+          "total": 45,
+          "target": 23
+        },
+        "slow": {
+          "total": 90,
+          "target": 17
+        },
+        "recovery": {
+          "total": 135,
+          "target": 64
+        }
+      },
+      "actually_delayed": 17,
+      "delayed_slo_successes": 0,
+      "cohort_vs_delay_symmetric_difference": 73,
+      "detection_delay_s": 4.600847025001713,
+      "recovery_declaration_delay_s": 5.304344078002032,
+      "recovery_censored": false,
+      "after_declaration": {
+        "dispatches": 119,
+        "target": 60
+      },
+      "client_latency_recovery": {
+        "first_arrival_delay_s": 0.0018237360018247273,
+        "first_completion_delay_s": 1.3083736180014967,
+        "subsequent_target_offers": 64
+      },
+      "transitions": 2,
+      "oscillations": 0,
+      "false_degradations": 0,
+      "max_arrival_lag_s": 0.0016552449997107033,
+      "injection_marker_error_s": 0.0016986650007311255,
+      "latency_p95": {
+        "ttft_s": 0.8245051150006475,
+        "tpot_s": 0.012442442976368233,
+        "e2e_s": 2.0549831480020657
+      }
+    },
+    {
+      "arm_id": "r2-B",
+      "stage": "measured",
+      "start": 16998.054789194,
+      "end": 17089.126643323,
+      "target": "replica2",
+      "trace_sha256": "edaaa37a870f2465059a4057e4b1167448c9c831e10d21087ce59ba7b6b97b07",
+      "whole": {
+        "offered": 270,
+        "completed": 270,
+        "failures": 0,
+        "rejections": 0,
+        "slo_successes": 252,
+        "slo_misses": 18,
+        "slo_fraction": 0.9333333333333333,
+        "goodput": 2.8
+      },
+      "drain_inclusive_goodput": 2.7675749405486503,
+      "cohorts": {
+        "pre": {
+          "offered": 45,
+          "completed": 45,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 45,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        },
+        "slow": {
+          "offered": 90,
+          "completed": 90,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 72,
+          "slo_misses": 18,
+          "slo_fraction": 0.8,
+          "goodput": 2.4
+        },
+        "recovery": {
+          "offered": 135,
+          "completed": 135,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 135,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        }
+      },
+      "dispatch_shares": {
+        "pre": {
+          "total": 45,
+          "target": 22
+        },
+        "slow": {
+          "total": 90,
+          "target": 18
+        },
+        "recovery": {
+          "total": 135,
+          "target": 61
+        }
+      },
+      "actually_delayed": 18,
+      "delayed_slo_successes": 0,
+      "cohort_vs_delay_symmetric_difference": 72,
+      "detection_delay_s": 4.272905517998879,
+      "recovery_declaration_delay_s": 7.310287520998827,
+      "recovery_censored": false,
+      "after_declaration": {
+        "dispatches": 113,
+        "target": 57
+      },
+      "client_latency_recovery": {
+        "first_arrival_delay_s": 2.0001602779993846,
+        "first_completion_delay_s": 3.3074580040010915,
+        "subsequent_target_offers": 61
+      },
+      "transitions": 2,
+      "oscillations": 0,
+      "false_degradations": 0,
+      "max_arrival_lag_s": 0.0011908023346514085,
+      "injection_marker_error_s": 0.001063481999153737,
+      "latency_p95": {
+        "ttft_s": 0.824077182001929,
+        "tpot_s": 0.012378457118126868,
+        "e2e_s": 2.0573193800009903
+      }
+    },
+    {
+      "arm_id": "r2-A",
+      "stage": "measured",
+      "start": 17106.228339506,
+      "end": 17197.301103812,
+      "target": "replica2",
+      "trace_sha256": "edaaa37a870f2465059a4057e4b1167448c9c831e10d21087ce59ba7b6b97b07",
+      "whole": {
+        "offered": 270,
+        "completed": 270,
+        "failures": 0,
+        "rejections": 0,
+        "slo_successes": 225,
+        "slo_misses": 45,
+        "slo_fraction": 0.8333333333333334,
+        "goodput": 2.5
+      },
+      "drain_inclusive_goodput": 2.4713606959969403,
+      "cohorts": {
+        "pre": {
+          "offered": 45,
+          "completed": 45,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 45,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        },
+        "slow": {
+          "offered": 90,
+          "completed": 90,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 45,
+          "slo_misses": 45,
+          "slo_fraction": 0.5,
+          "goodput": 1.5
+        },
+        "recovery": {
+          "offered": 135,
+          "completed": 135,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 135,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        }
+      },
+      "dispatch_shares": {
+        "pre": {
+          "total": 45,
+          "target": 22
+        },
+        "slow": {
+          "total": 90,
+          "target": 45
+        },
+        "recovery": {
+          "total": 135,
+          "target": 68
+        }
+      },
+      "actually_delayed": 45,
+      "delayed_slo_successes": 0,
+      "cohort_vs_delay_symmetric_difference": 45,
+      "detection_delay_s": null,
+      "recovery_declaration_delay_s": null,
+      "recovery_censored": null,
+      "after_declaration": {
+        "dispatches": 0,
+        "target": 0
+      },
+      "client_latency_recovery": {
+        "first_arrival_delay_s": 0.0005431790013972204,
+        "first_completion_delay_s": 1.600198222000472,
+        "subsequent_target_offers": 68
+      },
+      "transitions": 0,
+      "oscillations": 0,
+      "false_degradations": 0,
+      "max_arrival_lag_s": 0.001107405666218142,
+      "injection_marker_error_s": 0.0005179990002943669,
+      "latency_p95": {
+        "ttft_s": 0.8440397300000768,
+        "tpot_s": 0.011306414015754539,
+        "e2e_s": 2.276901553999778
+      }
+    },
+    {
+      "arm_id": "r3-A",
+      "stage": "measured",
+      "start": 17210.843975193,
+      "end": 17301.922732652,
+      "target": "replica1",
+      "trace_sha256": "cba5b3f2a70d036b4a4277accc32ca3466c904dc8d11383c5c3a19f7d90c8523",
+      "whole": {
+        "offered": 270,
+        "completed": 270,
+        "failures": 0,
+        "rejections": 0,
+        "slo_successes": 225,
+        "slo_misses": 45,
+        "slo_fraction": 0.8333333333333334,
+        "goodput": 2.5
+      },
+      "drain_inclusive_goodput": 2.4712985954568785,
+      "cohorts": {
+        "pre": {
+          "offered": 45,
+          "completed": 45,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 45,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        },
+        "slow": {
+          "offered": 90,
+          "completed": 90,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 45,
+          "slo_misses": 45,
+          "slo_fraction": 0.5,
+          "goodput": 1.5
+        },
+        "recovery": {
+          "offered": 135,
+          "completed": 135,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 135,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        }
+      },
+      "dispatch_shares": {
+        "pre": {
+          "total": 45,
+          "target": 23
+        },
+        "slow": {
+          "total": 90,
+          "target": 45
+        },
+        "recovery": {
+          "total": 135,
+          "target": 67
+        }
+      },
+      "actually_delayed": 45,
+      "delayed_slo_successes": 0,
+      "cohort_vs_delay_symmetric_difference": 45,
+      "detection_delay_s": null,
+      "recovery_declaration_delay_s": null,
+      "recovery_censored": null,
+      "after_declaration": {
+        "dispatches": 0,
+        "target": 0
+      },
+      "client_latency_recovery": {
+        "first_arrival_delay_s": 0.3338371970021399,
+        "first_completion_delay_s": 1.9270118350032135,
+        "subsequent_target_offers": 67
+      },
+      "transitions": 0,
+      "oscillations": 0,
+      "false_degradations": 0,
+      "max_arrival_lag_s": 0.0018366993366072393,
+      "injection_marker_error_s": 0.00047989800077630207,
+      "latency_p95": {
+        "ttft_s": 0.8418732780010032,
+        "tpot_s": 0.011297709716533908,
+        "e2e_s": 2.2689202499968815
+      }
+    },
+    {
+      "arm_id": "r3-B",
+      "stage": "measured",
+      "start": 17316.612178034,
+      "end": 17407.68842915,
+      "target": "replica1",
+      "trace_sha256": "cba5b3f2a70d036b4a4277accc32ca3466c904dc8d11383c5c3a19f7d90c8523",
+      "whole": {
+        "offered": 270,
+        "completed": 270,
+        "failures": 0,
+        "rejections": 0,
+        "slo_successes": 253,
+        "slo_misses": 17,
+        "slo_fraction": 0.937037037037037,
+        "goodput": 2.811111111111111
+      },
+      "drain_inclusive_goodput": 2.7789278425573696,
+      "cohorts": {
+        "pre": {
+          "offered": 45,
+          "completed": 45,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 45,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        },
+        "slow": {
+          "offered": 90,
+          "completed": 90,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 73,
+          "slo_misses": 17,
+          "slo_fraction": 0.8111111111111111,
+          "goodput": 2.433333333333333
+        },
+        "recovery": {
+          "offered": 135,
+          "completed": 135,
+          "failures": 0,
+          "rejections": 0,
+          "slo_successes": 135,
+          "slo_misses": 0,
+          "slo_fraction": 1.0,
+          "goodput": 3.0
+        }
+      },
+      "dispatch_shares": {
+        "pre": {
+          "total": 45,
+          "target": 23
+        },
+        "slow": {
+          "total": 90,
+          "target": 17
+        },
+        "recovery": {
+          "total": 135,
+          "target": 64
+        }
+      },
+      "actually_delayed": 17,
+      "delayed_slo_successes": 0,
+      "cohort_vs_delay_symmetric_difference": 73,
+      "detection_delay_s": 4.608048124999186,
+      "recovery_declaration_delay_s": 5.311955789999047,
+      "recovery_censored": false,
+      "after_declaration": {
+        "dispatches": 119,
+        "target": 60
+      },
+      "client_latency_recovery": {
+        "first_arrival_delay_s": 0.00161837600171566,
+        "first_completion_delay_s": 1.30863138100176,
+        "subsequent_target_offers": 64
+      },
+      "transitions": 2,
+      "oscillations": 0,
+      "false_degradations": 0,
+      "max_arrival_lag_s": 0.0035805463351934463,
+      "injection_marker_error_s": 0.001550364999275189,
+      "latency_p95": {
+        "ttft_s": 0.8241218220027804,
+        "tpot_s": 0.012463264267711294,
+        "e2e_s": 2.0550990470001125
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "pair": 1,
+      "whole_goodput_B_minus_A": 0.3111111111111109,
+      "slow_cohort_goodput_B_minus_A": 0.9333333333333331
+    },
+    {
+      "pair": 2,
+      "whole_goodput_B_minus_A": 0.2999999999999998,
+      "slow_cohort_goodput_B_minus_A": 0.8999999999999999
+    },
+    {
+      "pair": 3,
+      "whole_goodput_B_minus_A": 0.3111111111111109,
+      "slow_cohort_goodput_B_minus_A": 0.9333333333333331
+    }
+  ],
+  "pooled": {
+    "A": {
+      "offered": 810,
+      "completed": 810,
+      "failures": 0,
+      "rejections": 0,
+      "slo_successes": 675,
+      "slo_misses": 135,
+      "goodput": 2.5
+    },
+    "B": {
+      "offered": 810,
+      "completed": 810,
+      "failures": 0,
+      "rejections": 0,
+      "slo_successes": 758,
+      "slo_misses": 52,
+      "goodput": 2.8074074074074074
+    }
+  },
+  "log_findings": {
+    "replica1": {
+      "pre_shutdown_errors": 0,
+      "shutdown_EngineDeadError": true,
+      "note": "EngineDeadError occurs after recorded shutdown begins; not treated as a serving failure."
+    },
+    "replica2": {
+      "pre_shutdown_errors": 0,
+      "shutdown_EngineDeadError": true,
+      "note": "EngineDeadError occurs after recorded shutdown begins; not treated as a serving failure."
+    }
+  },
+  "limits": [
+    "Raw SSE payloads and per-token timestamps not retained; stream completeness is verified from receipt fields and usage, not replayed bytes.",
+    "Historical SHA256SUMS has hashes, not independent byte-size fields; tar header sizes match bytes read.",
+    "Source identity is recorded and source freeze matches Git; no executed-source filesystem attestation exists.",
+    "No independent off-volume backup is established by these artifacts.",
+    "Client recovery suffix is retrospective descriptive analysis, not a new frozen gate."
+  ],
+  "integrity": {
+    "archive": "/workspace/e11-results/e11-20260920T222928Z-99438da.tar.gz",
+    "sha256": "de534527f6c6bb4307ed62064b1684d3740e6acc82fbe98206e21dcb463a3b98",
+    "reference": "/workspace/e11-results/e11-20260920T222928Z-99438da.tar.gz.sha256",
+    "bytes": 48317473,
+    "prefix": "e11-20260920T222928Z-99438da",
+    "inventoried": 92,
+    "regular_files": 93,
+    "members": 106,
+    "size_limit": "Historical SHA256SUMS has hashes, not independent byte-size fields; tar header sizes match bytes read."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "status": "blocked_on_reviewed_gpu_pilot",
+  "stage": "measured",
+  "beta": 107.2820167,
+  "routing_modes": ["round_robin", "work_aware"],
+  "paired_repetitions_per_cell": 3,
+  "seeds": [52001, 52002, 52003],
+  "cells": {
+    "homogeneous": {
+      "request_count_per_arm": 128,
+      "loads_req_s": ["UNRESOLVED_LOW", "UNRESOLVED_NEAR_BOUNDARY"]
+    },
+    "mixed": {
+      "request_count_per_arm": 256,
+      "loads_req_s": ["UNRESOLVED_LOW", "UNRESOLVED_KNEE", "UNRESOLVED_NEAR_BOUNDARY"]
+    }
+  },
+  "pilot_data_pooling": false
+}

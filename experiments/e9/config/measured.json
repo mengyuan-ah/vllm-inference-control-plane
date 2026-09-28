@@ -1,0 +1,8 @@
+{
+  "stage": "measured",
+  "count": 256,
+  "offer_window_s": 32,
+  "input_tokens": 1024,
+  "output_tokens": 128,
+  "seeds": [92001, 92002, 92003]
+}

@@ -1,0 +1,7 @@
+{
+  "rates_rps": ["LOW_FROM_CALIBRATION", "MIXED_FROM_CALIBRATION", "HIGH_FROM_CALIBRATION"],
+  "seeds": [72001, 72002, 72003],
+  "requests_per_arm": 256,
+  "rate_order_by_repetition": [["low", "mixed", "high"], ["mixed", "high", "low"], ["high", "low", "mixed"]],
+  "predictor_parameters": "predictor-parameters.json"
+}

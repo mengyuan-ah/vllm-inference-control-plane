@@ -1,0 +1,50 @@
+[
+  {
+    "arm_id": "r1-A",
+    "pair_id": "r1",
+    "arm": "A",
+    "seed": 111001,
+    "target": "replica1",
+    "order": 0
+  },
+  {
+    "arm_id": "r1-B",
+    "pair_id": "r1",
+    "arm": "B",
+    "seed": 111001,
+    "target": "replica1",
+    "order": 1
+  },
+  {
+    "arm_id": "r2-B",
+    "pair_id": "r2",
+    "arm": "B",
+    "seed": 111002,
+    "target": "replica2",
+    "order": 2
+  },
+  {
+    "arm_id": "r2-A",
+    "pair_id": "r2",
+    "arm": "A",
+    "seed": 111002,
+    "target": "replica2",
+    "order": 3
+  },
+  {
+    "arm_id": "r3-A",
+    "pair_id": "r3",
+    "arm": "A",
+    "seed": 111003,
+    "target": "replica1",
+    "order": 4
+  },
+  {
+    "arm_id": "r3-B",
+    "pair_id": "r3",
+    "arm": "B",
+    "seed": 111003,
+    "target": "replica1",
+    "order": 5
+  }
+]

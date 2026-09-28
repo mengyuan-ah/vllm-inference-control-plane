@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+<rect width="100%" height="100%" fill="white"/>
+<text x="480.0" y="32" text-anchor="middle" font-family="sans-serif" font-size="22">Day 3 output-token throughput</text>
+<line x1="85" y1="65" x2="85" y2="480" stroke="#333"/>
+<line x1="85" y1="480" x2="930" y2="480" stroke="#333"/>
+<line x1="85" y1="480.00" x2="930" y2="480.00" stroke="#ddd"/>
+<text x="75" y="484.00" text-anchor="end" font-family="sans-serif" font-size="12">0.0</text>
+<line x1="85" y1="397.00" x2="930" y2="397.00" stroke="#ddd"/>
+<text x="75" y="401.00" text-anchor="end" font-family="sans-serif" font-size="12">303.0</text>
+<line x1="85" y1="314.00" x2="930" y2="314.00" stroke="#ddd"/>
+<text x="75" y="318.00" text-anchor="end" font-family="sans-serif" font-size="12">606.0</text>
+<line x1="85" y1="231.00" x2="930" y2="231.00" stroke="#ddd"/>
+<text x="75" y="235.00" text-anchor="end" font-family="sans-serif" font-size="12">909.0</text>
+<line x1="85" y1="148.00" x2="930" y2="148.00" stroke="#ddd"/>
+<text x="75" y="152.00" text-anchor="end" font-family="sans-serif" font-size="12">1212.0</text>
+<line x1="85" y1="65.00" x2="930" y2="65.00" stroke="#ddd"/>
+<text x="75" y="69.00" text-anchor="end" font-family="sans-serif" font-size="12">1515.0</text>
+<text x="85.00" y="505" text-anchor="middle" font-family="sans-serif" font-size="13">1</text>
+<text x="225.83" y="505" text-anchor="middle" font-family="sans-serif" font-size="13">2</text>
+<text x="366.67" y="505" text-anchor="middle" font-family="sans-serif" font-size="13">4</text>
+<text x="507.50" y="505" text-anchor="middle" font-family="sans-serif" font-size="13">8</text>
+<text x="648.33" y="505" text-anchor="middle" font-family="sans-serif" font-size="13">16</text>
+<text x="789.17" y="505" text-anchor="middle" font-family="sans-serif" font-size="13">32</text>
+<text x="930.00" y="505" text-anchor="middle" font-family="sans-serif" font-size="13">64</text>
+<text x="507.5" y="540" text-anchor="middle" font-family="sans-serif" font-size="14">Configured max concurrency</text>
+<text x="20" y="272.5" text-anchor="middle" transform="rotate(-90 20 272.5)" font-family="sans-serif" font-size="14">Output tokens per second</text>
+<polyline points="85.00,452.39 225.83,427.30 366.67,378.93 507.50,290.69 648.33,209.35 789.17,95.74 930.00,127.85" fill="none" stroke="#2563eb" stroke-width="3"/>
+<circle cx="85.00" cy="452.39" r="4" fill="#2563eb"><title>c1: 100.811</title></circle>
+<circle cx="225.83" cy="427.30" r="4" fill="#2563eb"><title>c2: 192.378</title></circle>
+<circle cx="366.67" cy="378.93" r="4" fill="#2563eb"><title>c4: 368.980</title></circle>
+<circle cx="507.50" cy="290.69" r="4" fill="#2563eb"><title>c8: 691.121</title></circle>
+<circle cx="648.33" cy="209.35" r="4" fill="#2563eb"><title>c16: 988.074</title></circle>
+<circle cx="789.17" cy="95.74" r="4" fill="#2563eb"><title>c32: 1402.806</title></circle>
+<circle cx="930.00" cy="127.85" r="4" fill="#2563eb"><title>c64: 1285.574</title></circle>
+<line x1="95" y1="81" x2="123" y2="81" stroke="#2563eb" stroke-width="3"/>
+<text x="131" y="85" font-family="sans-serif" font-size="13">Output tokens/s</text>
+</svg>

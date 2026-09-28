@@ -1,0 +1,42 @@
+# Phase 2 final synthesis
+
+Status: **bounded evidence closeout ready for review, not proof that every original experimental objective succeeded**. E3 has no confirmed capacity boundary; E10 full crash recovery is censored; independent off-volume preservation remains outstanding. No further GPU run was authorized or performed by this closeout.
+
+The completed E0–E11 program is summarized here. This E12 handoff is an evidence closeout, not a new performance experiment. Frozen experiment-specific amendments take precedence for interpreting their results and are not silently rewritten to match the original plan.
+
+## Evidence ledger
+
+Reported GPU” means this closeout reviewed the cited report, not its raw campaign. “Prior audit” means a preserved earlier independent CPU audit was reviewed. Only E11 raw archived rows/events received a new independent CPU audit here. Numerical findings below are scoped to each cited workload/pod; different rates are **not** a cross-pod capacity comparison.
+
+| Experiment | Question | Controlled comparison | Main measurement/result | Supported conclusion | Limitation/evidence status |
+| --- | --- | --- | --- | --- | --- |
+| E0 | Single-replica reference capacity? | Fixed workload, rate sweep on each pod | Original 2.5 req/s passed and 3 failed; replacement baseline 2.25, bracket 2.25–2.5 | Requalify capacity after pod changes | Reported GPU; bounded brackets, not universal capacity. [Phase 1 report](phase1-final-report.md) |
+| E1 | Gateway overhead? | Direct vs one-backend gateway at 1 req/s, three pairs | Mean added TTFT 7.870 ms, E2E 8.140 ms | Small measured low-load overhead on this path | Reported GPU; no high-load overhead claim |
+| E2 | Replica equivalence? | Direct replica1 vs replica2, matched load | Replacement six arms, 768/768 successful and equivalent within frozen margins at 2.25 req/s | Supports paired replica experiments on that qualified setup | Reported GPU; replacement qualification does not validate later pods |
+| E3 | Horizontal scaling and capacity boundary? | One vs two replicas at matched offered rates, bounded screening | Attempt 4 terminal classification INCONCLUSIVE; two-replica screening passed through 5 req/s, no unique monotonic boundary selected | Evidence of benefit at a tested point, **not a confirmed maximum** | Prior terminal summaries only; incomplete boundary and earlier failed attempts excluded. [Summary](e3-terminal-summary.json), [provenance](phase2-provenance.md), [frozen protocol](e3-frozen-protocol.json) |
+| E4 | Useful scalar work estimate? | Input/output-shape matrix, direct replicas | 36 arms / 2,448 successes; provisional beta 107.282017, fitted MAPE 0.0371 vs beta=1 MAPE 1.1638 | Output tokens dominated this fitted scalar cost model | Reported GPU fit, not out-of-sample latency/KV prediction; earlier invalid attempt separate |
+| E5 | Does work-aware routing help mixed traffic? | RR vs outstanding-work-aware, paired traces | 18 arms / 4,608 successes; work imbalance improved but TTFT p95 worsened by 68.861–71.292 ms | Better estimated work balance does not guarantee better latency | Reported GPU, tested mixed workload; not evidence for all routing policies. [Report](../../experiments/e5/MEASURED_MIXED_20260913.md) |
+| E6 | Do tight headroom and queues help? | Loose cap A vs cap4 B vs cap4+queue C | At 6 req/s, SLO successes A 768/768, B 611/768, C 25/768 | Restrictive admission/queueing can destroy useful throughput when baseline already meets SLO | Reported GPU; earlier reservation-race campaign superseded, not pooled. [Report](../../experiments/e6/MEASURED_RUN_20260913.md) |
+| E7 | Can shadow scores predict misses? | Always-pass vs count vs work, no enforcement | Count/work identical on 2,304 rows; 1,349/1,425 misses caught; at 11 req/s, 43/45 healthy requests falsely flagged | Strong detection but poor overload selectivity; no added work-feature benefit for fixed shape | Prior independent CPU audit confirms 100% coverage; no causal rejection claim. Safety/undefined-coverage fixes verified offline. [Measured](../../experiments/e7/MEASURED_RUN_20260913.md), [audit/fixes](../../experiments/e7/FOLLOWUP_REVIEW_FIXES_20260913.md) |
+| E8 | Does admission improve overload SLO goodput? | Matched A disabled vs B count gate | At 10 req/s: A 63/768 vs B 624/768 SLO offers; 11 req/s: 47/768 vs 570/768; rejected offers remain in denominator | Admission helped these tested overload conditions | Prior independent CPU audit; exact chronological arm order not reconstructable from timestamp-free manifests. Not a production policy recommendation. [Report](e8-execution-result.md) |
+| E9 | Does burstiness change admission benefit? | Smooth/bursty × A/B, matched content, three repetitions | Smooth B−A goodput [0,0,0]; bursty [1.21875,1.25,1.28125] req/s | Admission benefit depended on tested burst pattern | Prior independent CPU audit, 12 arms / 3,072 offers. Quiet gaps lack probes for exact continuous recovery time. [Prior audit](e9-prior-audit.md), [protocol](../../experiments/e9/README.md) |
+| E10 | Safe failover and crash recovery? | Control vs killed/restarted target, three pairs | Control 540/540 SLO; fault 534/540; six interrupted after-content streams; full Healthy return not observed by 60 s | Exclusion/survivor continuity and content-aware failover observed; full crash recovery **censored** | Reported GPU plus separate CPU outcome/recovery fixes. Raw six labels were wrong, derived audit corrected from TTFT without rewriting history. [Execution](../../experiments/e10/EXECUTION_REPORT.md), [CPU fix](../../experiments/e10/OUTCOME_FIX_REPORT.md) |
+| E11 | Detect and reduce traffic to reachable-but-slow path, then recover? | Same RR/trace/shims, handling disabled A vs enabled B | 675/810 vs 758/810 SLO; B−A whole-arm goodput [0.311111,0.300000,0.311111] req/s; all three detect/recover cycles observed | Latency-aware headroom helped this bounded serving-path-delay workload; normal routing resumed | Newly independently audited GPU evidence via CPU only; not GPU-capacity impairment; three pairs, no significance/generalization claim. [Execution](../../experiments/e11/EXECUTION_REPORT.md), [audit](e11-audit-report.md) |
+
+## Interpretation and boundaries
+
+Capacity must be requalified across pods, runtime versions and workloads. E0/E2 provide local qualification, not a license to compare later absolute rates. E4's scalar can balance estimated work without improving latency (E5). Tight limits and queues hurt in E6, while the bounded E8/E9 comparisons show benefit under their overload/burst conditions; these are not contradictory universal claims.
+
+Safe failover depends on whether content reached the client. E10's historical after-content interruptions cannot be replayed as clean requests, and its later CPU recovery tests do not manufacture a GPU Healthy transition. E11 covers a different failure mode: health remains responsive while serving latency degrades. Its reduced traffic retains recovery observations, and actual routing resumes after state restoration. **E11 recovery does not repair E10's censored outcome.**
+
+E11 amended the original plan's background-GPU-contention/routing-policy comparison to a symmetric serving-path shim and fixed RR policy. Its frozen primary denominator is the 90-second offer window, unlike the older global plan's drain-inclusive goodput. Both E11 denominators and the supplementary slowdown-arrival cohort are disclosed in the audit; no retrospective primary-metric substitution is made.
+
+## Completion and follow-up
+
+The reviewed evidence supports a bounded research narrative, not completion of every original scientific objective. E0/E1/E2/E4/E5/E6/E7/E8/E9 have measured reports or prior audits; E3 remains inconclusive; E10 has measured exclusion/failover with censored full recovery; E11 now has independently checked detection, reduction and observed restoration. Preparation-only and diagnostic artifacts remain historical, not extra successful repetitions.
+
+Remaining work requires separate authorization: independent off-volume archive preservation; any new E3 boundary experiment or longer E10 crash-recovery window; broader workloads/delays/rates and enough paired repetitions for statistical claims. This closeout neither executes nor preauthorizes those experiments.
+
+The public repository retains compact reports, derived summaries, selected machine-readable results,
+and frozen protocols. Large raw streams and historical deployment snapshots are maintained
+separately.

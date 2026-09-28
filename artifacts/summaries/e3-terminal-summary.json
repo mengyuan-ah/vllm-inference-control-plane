@@ -1,0 +1,68 @@
+{
+  "classification": "INCONCLUSIVE",
+  "infrastructure_valid": true,
+  "restoration_valid": true,
+  "selection": {
+    "reason": "no-unique-monotonic-boundary",
+    "selected_arm_ids": [],
+    "status": "INCONCLUSIVE"
+  },
+  "arms": [
+    {
+      "arm_id": "control-one-r1",
+      "rate": 1.0,
+      "topology": "one",
+      "experimental_slo_pass": true,
+      "infrastructure_valid": true
+    },
+    {
+      "arm_id": "control-two-r1",
+      "rate": 1.0,
+      "topology": "two",
+      "experimental_slo_pass": true,
+      "infrastructure_valid": true
+    },
+    {
+      "arm_id": "qualified-one-r1",
+      "rate": 2.25,
+      "topology": "one",
+      "experimental_slo_pass": true,
+      "infrastructure_valid": true
+    },
+    {
+      "arm_id": "qualified-two-r1",
+      "rate": 2.25,
+      "topology": "two",
+      "experimental_slo_pass": true,
+      "infrastructure_valid": true
+    },
+    {
+      "arm_id": "aggregate-one-r1",
+      "rate": 4.5,
+      "topology": "one",
+      "experimental_slo_pass": false,
+      "infrastructure_valid": true
+    },
+    {
+      "arm_id": "screen-two-4p50-r1",
+      "rate": 4.5,
+      "topology": "two",
+      "experimental_slo_pass": true,
+      "infrastructure_valid": true
+    },
+    {
+      "arm_id": "screen-two-4p75-r1",
+      "rate": 4.75,
+      "topology": "two",
+      "experimental_slo_pass": true,
+      "infrastructure_valid": true
+    },
+    {
+      "arm_id": "screen-two-5p00-r1",
+      "rate": 5.0,
+      "topology": "two",
+      "experimental_slo_pass": true,
+      "infrastructure_valid": true
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"stage":"pilot","rates":[9,10],"offers_per_arm":64,"seeds":[81001,81002],"configurations":["A","B"],"maximum_arms":4,"arm_timeout_s":180,"overall_timeout_s":600}

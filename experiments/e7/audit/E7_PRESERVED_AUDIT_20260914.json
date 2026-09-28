@@ -1,0 +1,75 @@
+{
+  "archive_sha256": "42d069601f0e88de556c7b89c3ba597884111b1739f2eeb6bf40a947006ed1a7",
+  "archive_sha256_verified": true,
+  "audit_passed": true,
+  "by_rate": {
+    "8": {
+      "healthy": 768,
+      "requests": 768,
+      "slo_misses": 0,
+      "count_threshold": {"tp": 0, "fp": 0, "fn": 0, "tn": 768}
+    },
+    "10": {
+      "healthy": 66,
+      "requests": 768,
+      "slo_misses": 702,
+      "count_threshold": {"tp": 672, "fp": 48, "fn": 30, "tn": 18}
+    },
+    "11": {
+      "healthy": 45,
+      "requests": 768,
+      "slo_misses": 723,
+      "count_threshold": {"tp": 677, "fp": 43, "fn": 46, "tn": 2}
+    }
+  },
+  "calibration_arms": [
+    "e7-calibration-r6-s71001",
+    "e7-calibration-r8-s71002",
+    "e7-calibration-r10-s71003",
+    "e7-calibration-r11-s71004"
+  ],
+  "calibration_measured_separation": true,
+  "completed_requests": 2304,
+  "consistent_parameter_rows": 2304,
+  "defined_prediction_coverage": {
+    "always_pass": 2304,
+    "count_threshold": 2304,
+    "work_threshold": 2304
+  },
+  "discrepancies": [],
+  "event_valid_rows": 2304,
+  "frozen_source_commit": "2c36697",
+  "inventory_entries": 79,
+  "inventory_failures": [],
+  "measured_arms": [
+    "e7-measured-r8-s72001",
+    "e7-measured-r8-s72002",
+    "e7-measured-r8-s72003",
+    "e7-measured-r10-s72001",
+    "e7-measured-r10-s72002",
+    "e7-measured-r10-s72003",
+    "e7-measured-r11-s72001",
+    "e7-measured-r11-s72002",
+    "e7-measured-r11-s72003"
+  ],
+  "measured_arm_count": 9,
+  "overall": {
+    "count_threshold": {"tp": 1349, "fp": 91, "fn": 76, "tn": 788},
+    "count_work_identical_rows": 2304,
+    "healthy": 879,
+    "slo_misses": 1425,
+    "work_threshold": {"tp": 1349, "fp": 91, "fn": 76, "tn": 788}
+  },
+  "predictor_parameters": {
+    "count_threshold": 8,
+    "predictor_version": "e7-shadow-v1",
+    "work_threshold": 109856.7851008
+  },
+  "reproduced_label_rows": 2304,
+  "reproduced_prediction_rows": 2304,
+  "requests_per_arm": 256,
+  "reservation_before_prediction_rows": 2304,
+  "timing_limitation": "Saved event order and timestamps establish feature capture before prediction and reservation-event ordering before prediction. No backend-dispatch timestamp was saved, so raw evidence alone cannot independently prove prediction preceded backend dispatch; that ordering is established by the executed source.",
+  "total_requests": 2304,
+  "valid_feature_rows": 2304
+}

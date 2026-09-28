@@ -1,0 +1,23 @@
+{
+  "protocol": "e9-equal-average-v1",
+  "measured_count_per_arm": 256,
+  "offer_window_s": 32,
+  "seeds": [92001, 92002, 92003],
+  "repetitions": [
+    {
+      "repetition": 1,
+      "seed": 92001,
+      "order": ["smooth-A", "bursty-B", "smooth-B", "bursty-A"]
+    },
+    {
+      "repetition": 2,
+      "seed": 92002,
+      "order": ["bursty-A", "smooth-B", "bursty-B", "smooth-A"]
+    },
+    {
+      "repetition": 3,
+      "seed": 92003,
+      "order": ["bursty-B", "bursty-A", "smooth-A", "smooth-B"]
+    }
+  ]
+}

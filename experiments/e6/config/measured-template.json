@@ -1,0 +1,14 @@
+{
+  "status": "blocked_until_valid_pilot",
+  "configurations": ["A", "B", "C"],
+  "rates_rps": ["PILOT_LOW", "PILOT_DEGRADATION", "PILOT_OVERLOAD"],
+  "repetitions": 3,
+  "seeds": [62001, 62002, 62003],
+  "requests_per_arm": 256,
+  "total_arms": 27,
+  "total_offered_requests": 6912,
+  "rotation": [["A", "B", "C"], ["B", "C", "A"], ["C", "A", "B"]],
+  "request_cap_per_replica": "PILOT_SELECTED",
+  "queue_size": "PILOT_SELECTED",
+  "queue_deadline_s": "PILOT_SELECTED"
+}

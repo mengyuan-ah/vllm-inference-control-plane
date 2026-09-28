@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520"><rect width="100%" height="100%" fill="white"/>
+<text x="460.0" y="27" text-anchor="middle" font-size="19">Boundary repetitions and pooled E2E p95</text>
+<line x1="85" y1="60" x2="85" y2="450" stroke="black"/><line x1="85" y1="450" x2="890" y2="450" stroke="black"/>
+<line x1="85" y1="154.94033353377174" x2="890" y2="154.94033353377174" stroke="#b91c1c" stroke-dasharray="7,5"/>
+<circle cx="286.25" cy="167.91039740804754" r="5" fill="#1769aa"/>
+<circle cx="286.25" cy="157.82964494185512" r="5" fill="#1769aa"/>
+<circle cx="286.25" cy="166.35190063499093" r="5" fill="#1769aa"/>
+<circle cx="688.75" cy="95.45454545454547" r="5" fill="#1769aa"/>
+<circle cx="688.75" cy="135.26998551568204" r="5" fill="#1769aa"/>
+<circle cx="688.75" cy="145.17628608468848" r="5" fill="#1769aa"/>
+<polygon points="286.25,159.59101845221056 279.25,172.59101845221056 293.25,172.59101845221056" fill="#1769aa"/>
+<polygon points="688.75,121.10422376114246 681.75,134.10422376114246 695.75,134.10422376114246" fill="#1769aa"/>
+<text x="95" y="78" fill="#1769aa" font-size="12">E2E p95 (triangles pooled)</text>
+<text x="460.0" y="508" text-anchor="middle">Offered requests/s (circles Day 5b; squares Day 5)</text>
+<text x="18" y="260.0" text-anchor="middle" transform="rotate(-90 18 260.0)">E2E p95 ms</text></svg>

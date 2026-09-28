@@ -1,0 +1,20 @@
+{
+  "protocol": "e10-failure-recovery-v1",
+  "measured_offers_per_arm": "DERIVED_AS_OFFERED_RATE_RPS_TIMES_60_SECONDS",
+  "offered_rate_rps": "FROZEN_AFTER_PILOT",
+  "offer_window_s": 60,
+  "fault_target_by_repetition": {"1": "replica1", "2": "replica2", "3": "replica1"},
+  "repetitions": [
+    {"repetition": 1, "seed": 101001, "order": ["control", "fault"]},
+    {"repetition": 2, "seed": 101002, "order": ["fault", "control"]},
+    {"repetition": 3, "seed": 101003, "order": ["control", "fault"]}
+  ],
+  "pilot": {
+    "seed": 100101,
+    "candidate_rates_rps": [2.0, 2.5, 3.0],
+    "maximum_attempts": 3,
+    "selection": "highest rate with >=0.99 SLO-success fraction and zero failed/rejected offers on one replica",
+    "stop": "stop at first failing candidate; if 2.0 fails, E10 measured execution is blocked"
+  },
+  "smoke_seed": 100001
+}
